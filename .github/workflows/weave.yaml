@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ahsayde/weave-action@master
+      - uses: weaveworks/weave-action@v1
         with:
           path: entities/kubernetes
           policies-path: policies
