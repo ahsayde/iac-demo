@@ -15,4 +15,5 @@ spec:
       - name: container-1
         securityContext:
           privileged: false
-          allowPrivilegeEscalation: true
+          allowPrivilegeEscalation: false
+
