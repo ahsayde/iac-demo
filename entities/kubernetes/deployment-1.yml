@@ -1,24 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-1
-  labels:
-    app: app-1
-spec:
-  replicas: 3
-  template:
-    metadata:
-      labels:
-        app: app-1
-    spec:
-      containers:
-      - name: container-1
-        securityContext:
-          privileged: false
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: app-2
   labels:
     app: app-2
@@ -33,4 +15,22 @@ spec:
       - name: container-1
         securityContext:
           allowPrivilegeEscalation: false
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-1
+  labels:
+    app: app-1
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app-1
+    spec:
+      containers:
+      - name: container-1
+        securityContext:
+          privileged: false
 
